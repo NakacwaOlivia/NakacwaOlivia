@@ -1,0 +1,70 @@
+---
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/#about', label: 'About' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#research', label: 'Research' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/#contact', label: 'Contact' },
+];
+---
+
+<header class="fixed left-0 right-0 top-0 z-50 border-b border-neutral-200/80 bg-paper/95 backdrop-blur">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Olivia Nakacwa home">
+      <img src="/images/logo1.png" alt="Olivia Nakacwa logo" class="h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]" />
+    </a>
+
+    <div class="flex min-w-0 flex-1 items-center justify-end gap-x-3 overflow-x-auto whitespace-nowrap pb-1 text-[0.68rem] font-bold uppercase text-ink sm:gap-x-5 sm:text-xs lg:gap-x-6">
+      {
+        navItems.map((item) => (
+          <a href={item.href} data-nav-link={item.href === '/' ? 'home' : item.href.replace('/#', '')} class="rounded-sm px-1 py-1 hover:text-accent data-[active=true]:bg-accent data-[active=true]:text-white">
+            {item.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>
+
+<script>
+  const navLinks = Array.from(document.querySelectorAll('[data-nav-link]'));
+  const sectionIds = navLinks
+    .map((link) => link.getAttribute('data-nav-link'))
+    .filter((id): id is string => Boolean(id && id !== 'home'));
+
+  const setActiveLink = (activeId: string) => {
+    navLinks.forEach((link) => {
+      link.setAttribute('data-active', link.getAttribute('data-nav-link') === activeId ? 'true' : 'false');
+    });
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleEntry?.target?.id) {
+        setActiveLink(visibleEntry.target.id);
+      }
+    },
+    {
+      rootMargin: '-35% 0px -50% 0px',
+      threshold: [0.1, 0.35, 0.6],
+    },
+  );
+
+  sectionIds.forEach((id) => {
+    const section = document.getElementById(id);
+    if (section) observer.observe(section);
+  });
+
+  const updateForTop = () => {
+    if (window.scrollY < 160) setActiveLink('home');
+  };
+
+  updateForTop();
+  window.addEventListener('scroll', updateForTop, { passive: true });
+</script>

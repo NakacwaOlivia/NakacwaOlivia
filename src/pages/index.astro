@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+
+const featuredMetrics = [
+  'Processed 10,000+ vehicle images from Kampala highways',
+  'YOLO-based vehicle detection with mAP: 0.85',
+  'OCR-based license plate recognition with CER: 5%',
+  'Speed estimation within +/-3 km/h accuracy',
+  '100+ automated tickets/day via SMS',
+  'Traffic dashboard used by 20+ officers daily',
+  '40% efficiency improvement over manual systems',
+];
+
+const projects = [
+  {
+    title: 'Groundwater Potential Prediction System',
+    tech: 'Python, Logistic Regression, ANN, Decision Tree',
+    text: 'Built ML models for groundwater potential prediction in Anambra State, Nigeria using vertical electrical sounding data from 207 locations to support sustainable water-resource planning in regions without centralized supply.',
+  },
+  {
+    title: 'Air Quality Data Pipeline & Prediction System',
+    tech: 'Python, ETL, ML, Data Visualization',
+    text: 'Automated environmental data transfer from 10+ sources into a centralized database, processing 100,000+ records daily and improving air quality prediction accuracy by 10%.',
+  },
+];
+
+const researchInterests = [
+  'On-device AI and edge computing',
+  'Real-time machine learning systems',
+  'Distributed AI and scalable pipelines',
+  'Computer vision and multi-sensor perception',
+  'System optimization for AI inference',
+];
+
+const experience = [
+  {
+    role: 'Head of IoT Department',
+    company: 'Queensland & Leeds Engineers',
+    dates: 'Jan 2024 - Present',
+    text: 'Led system integration, distributed monitoring, ICT infrastructure, and IoT-backend projects, achieving 99.9% uptime and reducing latency by 30%.',
+  },
+  {
+    role: 'Python Software Developer / ML Engineer',
+    company: '02G Ventures DBA Kin-Keepers (USA)',
+    dates: 'May 2024 - Aug 2025',
+    text: 'Built ElderCHAT backend systems for 1,000+ users and developed multi-agent AI workflows using LangChain, n8n, Hugging Face, and NLP pipelines.',
+  },
+  {
+    role: 'Data Engineer (Team Lead)',
+    company: 'Buvaaz Commerce',
+    dates: 'Jul 2024 - Dec 2024',
+    text: 'Built pipelines processing 1M+ records daily with 99% data accuracy, led a team of 4, and optimized ML models improving accuracy by 15%.',
+  },
+  {
+    role: 'Research Intern',
+    company: 'AirQo',
+    dates: 'Jun 2023 - Nov 2023',
+    text: 'Built automated pipelines for 100,000+ environmental records daily and developed ML models and visualizations for air quality prediction.',
+  },
+  {
+    role: 'Data Science & Software Engineering Research Intern',
+    company: 'Marconi Research and Innovations Laboratory',
+    dates: 'May 2022 - Oct 2022',
+    text: 'Contributed to maize disease classification models achieving 92% accuracy across 5+ crop disease categories.',
+  },
+];
+
+const credentials = [
+  {
+    title: 'Bachelor of Science in Computer Engineering',
+    place: 'Makerere University',
+    dates: 'Aug 2020 - May 2024',
+    text: 'CGPA: 3.89/5.0. Major in Computer Science with Electrical and Telecommunications Engineering minor.',
+  },
+  {
+    title: 'Applied Data Science Lab',
+    place: 'WorldQuant University',
+    dates: 'Jun 2024 - Present',
+    text: 'Hands-on training in predictive modeling, big data analytics, Python, and machine learning for real-world problems.',
+  },
+  {
+    title: 'Africa Climate and Health Data Capacity Accelerator Network',
+    place: 'Global Partnership for Sustainable Development Data',
+    dates: 'Feb 2025 - Jun 2025',
+    text: 'Program focused on data-driven solutions for climate and health challenges in Africa.',
+  },
+];
+
+const skillGroups = [
+  {
+    title: 'AI & Systems',
+    skills: ['Machine Learning', 'Computer Vision', 'NLP', 'Real-Time Systems', 'Distributed Systems', 'Model Optimization'],
+  },
+  {
+    title: 'Tools',
+    skills: ['Python', 'C/C++', 'PyTorch', 'TensorFlow', 'Hugging Face', 'Airflow', 'Docker', 'CI/CD', 'LangChain', 'n8n', 'CrewAI'],
+  },
+  {
+    title: 'Data',
+    skills: ['PostgreSQL', 'MySQL', 'SQL Server', 'Neo4j', 'Power BI', 'Tableau'],
+  },
+];
+
+const exploring = [
+  'Efficient inference for on-device AI',
+  'Real-time perception pipelines',
+  'Adaptive AI systems under resource constraints',
+];
+---
+
+<BaseLayout title="Olivia Nakacwa | Portfolio">
+  <main class="relative min-h-screen overflow-hidden bg-paper">
+    <Nav />
+
+    <section class="mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-5 pb-16 pt-32 sm:px-8 sm:pt-36 lg:grid-cols-[1.15fr_0.85fr] lg:pb-20">
+      <div class="relative z-10 max-w-2xl">
+        <p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-accent">Computer Engineer</p>
+        <h1 class="text-5xl font-black leading-tight text-ink sm:text-6xl lg:text-7xl">
+          Olivia Nakacwa
+        </h1>
+        <p class="mt-5 text-2xl font-bold leading-tight text-neutral-900 sm:text-3xl">
+          Building Scalable AI Systems for Real-World Environments
+        </p>
+        <p class="mt-6 max-w-xl text-lg font-semibold leading-8 text-neutral-700">
+          Computer Engineer specializing in real-time machine learning systems, on-device AI, and perception-driven intelligent systems.
+        </p>
+        <p class="mt-5 max-w-2xl leading-8 text-neutral-700">
+          I design and deploy intelligent systems that operate under real-world constraints, integrating machine learning, distributed systems, and computer vision to solve practical challenges in infrastructure, healthcare, and environmental monitoring.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projects" class="rounded-md bg-ink px-5 py-3 text-sm font-bold uppercase text-white hover:bg-accent">
+            View Projects
+          </a>
+          <a href="#contact" class="rounded-md border border-ink px-5 py-3 text-sm font-bold uppercase text-ink hover:border-accent hover:text-accent">
+            Contact
+          </a>
+        </div>
+
+        <div class="mt-16 flex gap-5 text-sm font-bold uppercase tracking-[0.16em] text-neutral-700">
+          <a href="https://www.linkedin.com/in/nakacwa-olivia/" class="hover:text-accent">LinkedIn</a>
+          <a href="https://github.com/NakacwaOlivia" class="hover:text-accent">GitHub</a>
+          <a href="mailto:k.nakacwa.olivia@gmail.com" class="hover:text-accent">Email</a>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-[22rem] lg:mr-0">
+        <div class="rounded-lg border border-neutral-200 bg-white p-3 shadow-soft">
+          <img src="/images/olivia-portrait.jpg" alt="Olivia Nakacwa portrait" class="aspect-square w-full rounded-md object-cover" />
+        </div>
+        <div class="mt-4 rounded-lg border border-neutral-200 bg-white p-4">
+          <p class="text-sm font-black uppercase tracking-[0.16em] text-accent">Focus</p>
+          <p class="mt-2 font-bold leading-7 text-neutral-800">Real-time ML systems, edge AI, computer vision, and scalable data pipelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="border-t border-neutral-200 bg-white px-5 py-20 sm:px-8">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.65fr_1.35fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">About</p>
+          <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Intelligent systems for constrained environments</h2>
+        </div>
+        <div class="space-y-5 text-lg leading-8 text-neutral-700">
+          <p>I am a computer engineer focused on designing intelligent systems that operate reliably in real-world environments. My work sits at the intersection of machine learning, system software, and real-time computing, with a particular emphasis on efficient, scalable, and on-device AI systems.</p>
+          <p>Growing up and working in Uganda, I observed limitations in digital infrastructure, particularly in systems requiring real-time data processing, scalability, and reliability. These experiences shaped my goal of building robust AI systems that function effectively under resource constraints.</p>
+          <p>I have experience designing and deploying data-intensive systems and machine learning applications, including real-time computer vision systems and large-scale data pipelines. My research interests include efficient inference, distributed AI systems, and perception-driven intelligent systems that integrate multi-sensor data such as images, video, and 3D point clouds.</p>
+          <p>I am particularly interested in building intelligent systems that operate on-device, where efficiency, adaptability, and reliability are critical.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-[#101010] px-5 py-20 text-white sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Projects</p>
+        <h2 class="mt-3 text-4xl font-black sm:text-5xl">Featured AI Systems Work</h2>
+
+        <article class="mt-10 grid gap-8 rounded-lg border border-white/10 bg-[#191919] p-6 shadow-soft sm:p-8 lg:grid-cols-[1.25fr_0.75fr]">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Featured Project</p>
+            <h3 class="mt-3 text-3xl font-black">Real-Time Traffic Monitoring & Automatic Ticketing System</h3>
+            <p class="mt-3 font-bold text-white/80">Python, YOLO, CNNs, OCR, Flask</p>
+            <p class="mt-6 text-lg leading-8 text-white/75">
+              Developed a real-time computer vision system for automated traffic enforcement using deep learning and sensor-based estimation. The system integrates perception, decision-making, Africa's Talking SMS delivery, and a web dashboard into a scalable deployment pipeline.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="https://arxiv.org/abs/2601.00344" class="rounded-md bg-accent px-5 py-3 text-sm font-bold uppercase text-white hover:bg-white hover:text-ink">
+                Read Paper
+              </a>
+            </div>
+          </div>
+          <div class="rounded-lg bg-white p-5 text-ink">
+            <h4 class="text-sm font-black uppercase tracking-[0.16em] text-neutral-600">System Highlights</h4>
+            <ul class="mt-5 space-y-4">
+              {
+                featuredMetrics.map((metric) => (
+                  <li class="border-l-4 border-accent pl-4 font-semibold leading-7 text-neutral-800">{metric}</li>
+                ))
+              }
+            </ul>
+          </div>
+        </article>
+
+        <div class="mt-6 grid gap-5 md:grid-cols-2">
+          {
+            projects.map((project) => (
+              <article class="rounded-lg border border-white/10 bg-[#191919] p-6">
+                <h3 class="text-2xl font-black">{project.title}</h3>
+                <p class="mt-3 font-bold text-accent">{project.tech}</p>
+                <p class="mt-5 leading-7 text-white/70">{project.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="bg-paper px-5 py-20 sm:px-8">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Research</p>
+          <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Efficient AI that works in real time</h2>
+          <p class="mt-6 text-lg leading-8 text-neutral-700">
+            My research focuses on designing efficient, scalable AI systems that operate in real-time and resource-constrained environments.
+          </p>
+          <a href="https://arxiv.org/abs/2601.00344" class="mt-8 inline-flex rounded-md bg-ink px-5 py-3 text-sm font-bold uppercase text-white hover:bg-accent">
+            View Preprint
+          </a>
+          <p class="mt-4 max-w-xl text-sm font-semibold leading-6 text-neutral-600">
+            Intelligent Traffic Surveillance for Real-Time Vehicle Detection, License Plate Recognition, and Speed Estimation. arXiv:2601.00344.
+          </p>
+          <p class="mt-4 max-w-xl text-sm font-semibold leading-6 text-neutral-600">
+            Co-author on a groundwater potential prediction manuscript using Logistic Regression, ANN, and Decision Tree models for Anambra State, Nigeria.
+          </p>
+        </div>
+
+        <div class="grid gap-3">
+          {
+            researchInterests.map((interest) => (
+              <div class="rounded-lg border border-neutral-200 bg-white p-5 font-bold text-neutral-800">{interest}</div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="bg-white px-5 py-20 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Experience</p>
+        <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Engineering delivery across AI, data, and infrastructure</h2>
+        <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {
+            experience.map((item) => (
+              <article class="rounded-lg border border-neutral-200 bg-paper p-6">
+                <p class="text-sm font-black uppercase tracking-[0.16em] text-accent">{item.dates}</p>
+                <h3 class="text-2xl font-black text-ink">{item.role}</h3>
+                <p class="mt-3 font-bold text-accent">{item.company}</p>
+                <p class="mt-5 leading-7 text-neutral-700">{item.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-paper px-5 py-20 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Education & Training</p>
+        <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Academic and applied data science foundation</h2>
+        <div class="mt-10 grid gap-5 lg:grid-cols-3">
+          {
+            credentials.map((item) => (
+              <article class="rounded-lg border border-neutral-200 bg-white p-6">
+                <p class="text-sm font-black uppercase tracking-[0.16em] text-accent">{item.dates}</p>
+                <h3 class="mt-3 text-2xl font-black text-ink">{item.title}</h3>
+                <p class="mt-3 font-bold text-neutral-800">{item.place}</p>
+                <p class="mt-5 leading-7 text-neutral-700">{item.text}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="bg-[#191919] px-5 py-20 text-white sm:px-8">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Skills</p>
+          <h2 class="mt-3 text-4xl font-black sm:text-5xl">AI systems toolkit</h2>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          {
+            skillGroups.map((group) => (
+              <article class="rounded-lg bg-white p-6 text-ink">
+                <h3 class="text-xl font-black">{group.title}</h3>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  {group.skills.map((skill) => <span class="rounded-md bg-paper px-3 py-2 text-sm font-bold text-neutral-700">{skill}</span>)}
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-paper px-5 py-20 sm:px-8">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Currently Exploring</p>
+        <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">What I am currently exploring</h2>
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          {
+            exploring.map((item) => (
+              <div class="rounded-lg border border-neutral-200 bg-white p-6 text-lg font-bold leading-7 text-neutral-800">{item}</div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white px-5 py-20 sm:px-8">
+      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_0.8fr]">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Contact</p>
+          <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Research collaborations, internships, and AI systems opportunities</h2>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-700">
+            I am always open to research collaborations, internships, and opportunities in AI systems and intelligent infrastructure.
+          </p>
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <a href="mailto:k.nakacwa.olivia@gmail.com" class="rounded-md bg-ink px-5 py-4 text-center text-sm font-bold uppercase text-white hover:bg-accent">
+            k.nakacwa.olivia@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/nakacwa-olivia/" class="rounded-md border border-neutral-300 px-5 py-4 text-center text-sm font-bold uppercase text-ink hover:border-accent hover:text-accent">
+            LinkedIn
+          </a>
+          <a href="https://github.com/NakacwaOlivia" class="rounded-md border border-neutral-300 px-5 py-4 text-center text-sm font-bold uppercase text-ink hover:border-accent hover:text-accent">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
