@@ -4,6 +4,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://NakacwaOlivia.github.io',
-  base: '/NakacwaOlivia',
   output: 'static',
 });
