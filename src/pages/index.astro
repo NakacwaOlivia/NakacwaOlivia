@@ -360,7 +360,7 @@ const exploring = [
   </main>
 </BaseLayout>
 
-<script>
+<script is:inline>
   const carouselContainer = document.getElementById('carousel-container');
   const prevButton = document.getElementById('carousel-prev');
   const nextButton = document.getElementById('carousel-next');
@@ -375,14 +375,15 @@ const exploring = [
   };
 
   const updateCarousel = () => {
-    const cardsPerView = getCardsPerView();
-    const cardWidth = cards[0]?.offsetWidth + 20;
+    if (!carouselContainer || cards.length === 0) return;
+    const firstCard = cards[0];
+    if (!firstCard || !('offsetWidth' in firstCard)) return;
+    const cardWidth = firstCard.offsetWidth + 20;
     const translateX = -currentIndex * cardWidth;
     carouselContainer.style.transform = `translateX(${translateX}px)`;
   };
 
   prevButton?.addEventListener('click', () => {
-    const cardsPerView = getCardsPerView();
     currentIndex = Math.max(0, currentIndex - 1);
     updateCarousel();
   });
