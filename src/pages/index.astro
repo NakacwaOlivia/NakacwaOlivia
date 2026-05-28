@@ -13,17 +13,14 @@ const featuredMetrics = [
   '40% efficiency improvement over manual systems',
 ];
 
-const projects = [
-  {
-    title: 'Groundwater Potential Prediction System',
-    tech: 'Python, Logistic Regression, ANN, Decision Tree',
-    text: 'Built ML models for groundwater potential prediction in Anambra State, Nigeria using vertical electrical sounding data from 207 locations to support sustainable water-resource planning in regions without centralized supply.',
-  },
-  {
-    title: 'Air Quality Data Pipeline & Prediction System',
-    tech: 'Python, ETL, ML, Data Visualization',
-    text: 'Automated environmental data transfer from 10+ sources into a centralized database, processing 100,000+ records daily and improving air quality prediction accuracy by 10%.',
-  },
+const groundwaterMetrics = [
+  'Ensemble learning and ANN models with strong classification performance',
+  'Spatial and structural aquifer variables as key predictors',
+  'Exploratory aquifer potential maps for data-scarce environments',
+  'Target leakage mitigation by excluding resistivity-based predictors',
+  'Spatial autocorrelation bias reduced with GroupKFold',
+  'Interpretability via permutation importance and feature stability analysis',
+  'Managed limited data with repeated cross-validation',
 ];
 
 const researchInterests = [
@@ -108,6 +105,29 @@ const exploring = [
   'Real-time perception pipelines',
   'Adaptive AI systems under resource constraints',
 ];
+
+const featuredProjects = [
+  {
+    title: 'Machine Learning-Assisted Classification Of Ves-Derived Aquifer Potential Indicators: A Hydrogeophysical Investigation In Anambra State, Nigeria.',
+    tech: 'Python • Scikit-learn • Pandas • GeoPandas • Folium • Seaborn • Matplotlib • Spatial Analysis • Machine Learning • Hydrogeophysics',
+    text: 'Developed a hydrogeophysical machine learning framework for exploratory classification of VES-derived aquifer potential indicators using spatial analysis, feature engineering, ensemble learning, and leakage-aware validation strategies on geophysical survey data from 207 Vertical Electrical Sounding (VES) locations in Anambra State, Nigeria.',
+    dates: 'Jun 2024 - Feb 2026',
+    highlights: groundwaterMetrics,
+    link: null,
+    linkText: null,
+    submitted: true
+  },
+  {
+    title: 'Intelligent Traffic Surveillance for Real-Time Vehicle Detection, License Plate Recognition, and Speed Estimation',
+    tech: 'Python, YOLO, CNNs, OCR, Flask',
+    text: 'Developed a real-time computer vision system for automated traffic enforcement using deep learning and sensor-based estimation. The system integrates perception, decision-making, Africa\'s Talking SMS delivery, and a web dashboard into a scalable deployment pipeline.',
+    dates: 'Oct 2023 - Sep 2025',
+    highlights: featuredMetrics,
+    link: 'https://arxiv.org/abs/2601.00344',
+    linkText: 'Read Paper',
+    submitted: false
+  }
+];
 ---
 
 <BaseLayout title="Olivia Nakacwa | Portfolio">
@@ -173,46 +193,63 @@ const exploring = [
 
     <section id="projects" class="bg-[#101010] px-5 py-20 text-white sm:px-8">
       <div class="mx-auto max-w-6xl">
-        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Projects</p>
-        <h2 class="mt-3 text-4xl font-black sm:text-5xl">Featured AI Systems Work</h2>
-
-        <article class="mt-10 grid gap-8 rounded-lg border border-white/10 bg-[#191919] p-6 shadow-soft sm:p-8 lg:grid-cols-[1.25fr_0.75fr]">
+        <div class="flex items-center justify-between gap-4">
           <div>
-            <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Featured Project</p>
-            <h3 class="mt-3 text-3xl font-black">Real-Time Traffic Monitoring & Automatic Ticketing System</h3>
-            <p class="mt-3 font-bold text-white/80">Python, YOLO, CNNs, OCR, Flask</p>
-            <p class="mt-6 text-lg leading-8 text-white/75">
-              Developed a real-time computer vision system for automated traffic enforcement using deep learning and sensor-based estimation. The system integrates perception, decision-making, Africa's Talking SMS delivery, and a web dashboard into a scalable deployment pipeline.
-            </p>
-            <div class="mt-7 flex flex-wrap gap-3">
-              <a href="https://arxiv.org/abs/2601.00344" target="_blank" rel="noopener noreferrer" class="rounded-md bg-accent px-5 py-3 text-sm font-bold uppercase text-white hover:bg-white hover:text-ink">
-                Read Paper
-              </a>
-            </div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Projects</p>
+            <h2 class="mt-3 text-4xl font-black sm:text-5xl">Featured AI Systems Work</h2>
           </div>
-          <div class="rounded-lg bg-white p-5 text-ink">
-            <h4 class="text-sm font-black uppercase tracking-[0.16em] text-neutral-600">System Highlights</h4>
-            <ul class="mt-5 space-y-4">
-              {
-                featuredMetrics.map((metric) => (
-                  <li class="border-l-4 border-accent pl-4 font-semibold leading-7 text-neutral-800">{metric}</li>
-                ))
-              }
-            </ul>
+          <div class="flex gap-3">
+            <button id="projects-carousel-prev" class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-ink hover:bg-accent hover:text-white hover:border-accent">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button id="projects-carousel-next" class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-ink hover:bg-accent hover:text-white hover:border-accent">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
           </div>
-        </article>
-
-        <div class="mt-6 grid gap-5 md:grid-cols-2">
-          {
-            projects.map((project) => (
-              <article class="rounded-lg border border-white/10 bg-[#191919] p-6">
-                <h3 class="text-2xl font-black">{project.title}</h3>
-                <p class="mt-3 font-bold text-accent">{project.tech}</p>
-                <p class="mt-5 leading-7 text-white/70">{project.text}</p>
-              </article>
-            ))
-          }
         </div>
+
+        <div class="mt-10 overflow-hidden">
+          <div id="projects-carousel-container" class="flex gap-5 transition-transform duration-300">
+            {
+              featuredProjects.map((project) => (
+                <article class="flex-shrink-0 w-full grid gap-8 rounded-lg border border-white/10 bg-[#191919] p-6 shadow-soft sm:p-8 lg:grid-cols-[1.25fr_0.75fr]">
+                  <div>
+                    <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{project.dates}</p>
+                    <h3 class="mt-3 text-3xl font-black">{project.title}</h3>
+                    <p class="mt-3 font-bold text-white/80">{project.tech}</p>
+                    <p class="mt-6 text-lg leading-8 text-white/75">
+                      {project.text}
+                    </p>
+                    <div class="mt-7 flex flex-wrap gap-3">
+                      {project.link && (
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" class="rounded-md bg-accent px-5 py-3 text-sm font-bold uppercase text-white hover:bg-white hover:text-ink">
+                          {project.linkText}
+                        </a>
+                      )}
+                      {project.submitted && (
+                        <span class="rounded-md bg-accent px-5 py-3 text-sm font-bold uppercase text-white">Submitted and Under Review</span>
+                      )}
+                    </div>
+                  </div>
+                  <div class="rounded-lg bg-white p-5 text-ink">
+                    <h4 class="text-sm font-black uppercase tracking-[0.16em] text-neutral-600">Project Highlights</h4>
+                    <ul class="mt-5 space-y-4">
+                      {project.highlights.map((metric) => (
+                        <li class="border-l-4 border-accent pl-4 font-semibold leading-7 text-neutral-800">{metric}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+
+
       </div>
     </section>
 
@@ -362,6 +399,7 @@ const exploring = [
 </BaseLayout>
 
 <script is:inline>
+  // Experience carousel
   const carouselContainer = document.getElementById('carousel-container');
   const prevButton = document.getElementById('carousel-prev');
   const nextButton = document.getElementById('carousel-next');
@@ -396,6 +434,72 @@ const exploring = [
     updateCarousel();
   });
 
-  window.addEventListener('resize', updateCarousel);
+  // Projects carousel
+  const projectsCarouselContainer = document.getElementById('projects-carousel-container');
+  const projectsPrevButton = document.getElementById('projects-carousel-prev');
+  const projectsNextButton = document.getElementById('projects-carousel-next');
+  const projectCards = Array.from(projectsCarouselContainer?.children || []);
+  let projectsCurrentIndex = 0;
+  let projectsAutoplayInterval;
+
+  const updateProjectsCarousel = () => {
+    if (!projectsCarouselContainer || projectCards.length === 0) return;
+    const firstProjectCard = projectCards[0];
+    if (!firstProjectCard || !('offsetWidth' in firstProjectCard)) return;
+    const projectCardWidth = firstProjectCard.offsetWidth + 20;
+    const translateX = -projectsCurrentIndex * projectCardWidth;
+    projectsCarouselContainer.style.transform = `translateX(${translateX}px)`;
+  };
+
+  const nextProjectSlide = () => {
+    // Always show 1 card
+    const maxIndex = Math.max(0, projectCards.length - 1);
+    // If we're at last slide, go back to first
+    if (projectsCurrentIndex === maxIndex) {
+      projectsCurrentIndex = 0;
+    } else {
+      projectsCurrentIndex = Math.min(maxIndex, projectsCurrentIndex + 1);
+    }
+    updateProjectsCarousel();
+  };
+
+  const startProjectsAutoplay = () => {
+    if (projectsAutoplayInterval) clearInterval(projectsAutoplayInterval);
+    // Auto-play every 5 seconds
+    projectsAutoplayInterval = setInterval(nextProjectSlide, 5000);
+  };
+
+  const stopProjectsAutoplay = () => {
+    if (projectsAutoplayInterval) clearInterval(projectsAutoplayInterval);
+  };
+
+  projectsPrevButton?.addEventListener('click', () => {
+    projectsCurrentIndex = Math.max(0, projectsCurrentIndex - 1);
+    updateProjectsCarousel();
+    // Reset autoplay timer after manual navigation
+    stopProjectsAutoplay();
+    startProjectsAutoplay();
+  });
+
+  projectsNextButton?.addEventListener('click', () => {
+    nextProjectSlide();
+    // Reset autoplay timer after manual navigation
+    stopProjectsAutoplay();
+    startProjectsAutoplay();
+  });
+
+  // Pause autoplay on hover
+  projectsCarouselContainer?.addEventListener('mouseenter', stopProjectsAutoplay);
+  projectsCarouselContainer?.addEventListener('mouseleave', startProjectsAutoplay);
+
+  // Update both carousels on resize
+  window.addEventListener('resize', () => {
+    updateCarousel();
+    updateProjectsCarousel();
+  });
+
   updateCarousel();
+  updateProjectsCarousel();
+  // Start autoplay when page loads
+  startProjectsAutoplay();
 </script>
