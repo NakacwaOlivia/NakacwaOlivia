@@ -39,7 +39,7 @@ const experience = [
     text: 'Led system integration, distributed monitoring, ICT infrastructure, and IoT-backend projects, achieving 99.9% uptime and reducing latency by 30%.',
   },
   {
-    role: 'Python Software Developer / ML Engineer',
+    role: 'Python Software Developer',
     company: '02G Ventures DBA Kin-Keepers (USA)',
     dates: 'May 2024 - Aug 2025',
     text: 'Built ElderCHAT backend systems for 1,000+ users and developed multi-agent AI workflows using LangChain, n8n, Hugging Face, and NLP pipelines.',
@@ -183,10 +183,10 @@ const featuredProjects = [
           <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Intelligent systems for constrained environments</h2>
         </div>
         <div class="space-y-5 text-lg leading-8 text-neutral-700">
-          <p>I am a computer engineer focused on designing intelligent systems that operate reliably in real-world environments. My work sits at the intersection of machine learning, system software, and real-time computing, with a particular emphasis on efficient, scalable, and on-device AI systems.</p>
-          <p>Growing up and working in Uganda, I observed limitations in digital infrastructure, particularly in systems requiring real-time data processing, scalability, and reliability. These experiences shaped my goal of building robust AI systems that function effectively under resource constraints.</p>
-          <p>I have experience designing and deploying data-intensive systems and machine learning applications, including real-time computer vision systems and large-scale data pipelines. My research interests include efficient inference, distributed AI systems, and perception-driven intelligent systems that integrate multi-sensor data such as images, video, and 3D point clouds.</p>
-          <p>I am particularly interested in building intelligent systems that operate on-device, where efficiency, adaptability, and reliability are critical.</p>
+          <p>I am a computer engineer focused on designing intelligent systems that operate reliably in real-world environments. My work sits at the intersection of machine learning, distributed systems, and real-time computing, with interests spanning scalable AI systems, geospatial intelligence, computer vision, and on-device inference.</p>
+          <p>Growing up and working in Uganda, I observed limitations in digital infrastructure, particularly in systems requiring real-time processing, scalability, and operational reliability. These experiences shaped my interest in building robust AI systems capable of functioning effectively under resource-constrained conditions.</p>
+          <p>I have experience developing data-intensive systems and machine learning applications across intelligent infrastructure, computer vision, and hydrogeophysical modeling, including real-time perception systems, spatial machine learning workflows, and distributed data pipelines. My research interests include efficient inference, distributed AI systems, geospatial and environmental AI, and perception-driven intelligent systems that integrate multimodal data such as images, video, sensor streams, and spatial information.</p>
+          <p>I am particularly interested in how reliable machine learning systems can support intelligent infrastructure, environmental decision-support systems, and real-world sensing applications where efficiency, adaptability, and robustness are critical.</p>
         </div>
       </div>
     </section>
@@ -339,18 +339,16 @@ const featuredProjects = [
     </section>
 
     <section id="skills" class="bg-[#191919] px-5 py-20 text-white sm:px-8">
-      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-        <div>
-          <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Skills</p>
-          <h2 class="mt-3 text-4xl font-black sm:text-5xl">AI systems toolkit</h2>
-        </div>
-        <div class="grid gap-5 md:grid-cols-3">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Skills</p>
+        <h2 class="mt-3 text-4xl font-black sm:text-5xl">AI systems toolkit</h2>
+        <div class="mt-10 grid gap-5 lg:grid-cols-3">
           {
             skillGroups.map((group) => (
-              <article class="rounded-lg bg-white p-6 text-ink">
-                <h3 class="text-xl font-black">{group.title}</h3>
+              <article class="rounded-lg border border-neutral-200 bg-white p-6">
+                <h3 class="text-xl font-black text-ink">{group.title}</h3>
                 <div class="mt-5 flex flex-wrap gap-2">
-                  {group.skills.map((skill) => <span class="rounded-md bg-paper px-3 py-2 text-sm font-bold text-neutral-700">{skill}</span>)}
+                  {group.skills.map((skill) => <span class="rounded-lg bg-neutral-100 px-3 py-2 text-sm font-semibold text-neutral-800">{skill}</span>)}
                 </div>
               </article>
             ))

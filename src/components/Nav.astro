@@ -1,26 +1,26 @@
 ---
 import logo from '../../public/images/logo1.png';
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/#about', label: 'About' },
-  { href: '/#projects', label: 'Projects' },
-  { href: '/#research', label: 'Research' },
-  { href: '/#experience', label: 'Experience' },
-  { href: '/#skills', label: 'Skills' },
-  { href: '/#contact', label: 'Contact' },
+  { href: `${import.meta.env.BASE_URL}/`, label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#research', label: 'Research' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#contact', label: 'Contact' },
 ];
 ---
 
 <header class="fixed left-0 right-0 top-0 z-50 border-b border-neutral-200/80 bg-paper/95 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
-    <a href="/" class="flex shrink-0 items-center gap-3" aria-label="Olivia Nakacwa home">
+    <a href={`${import.meta.env.BASE_URL}/`} class="flex shrink-0 items-center gap-3" aria-label="Olivia Nakacwa home">
       <img src={logo.src} alt="Olivia Nakacwa logo" class="h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]" />
     </a>
 
     <div class="flex min-w-0 flex-1 items-center justify-end gap-x-3 overflow-x-auto whitespace-nowrap pb-1 text-[0.68rem] font-bold uppercase text-ink sm:gap-x-5 sm:text-xs lg:gap-x-6">
       {
         navItems.map((item) => (
-          <a href={item.href} data-nav-link={item.href === '/' ? 'home' : item.href.replace('/#', '')} class="rounded-sm px-1 py-1 hover:text-accent data-[active=true]:bg-accent data-[active=true]:text-white">
+          <a href={item.href} data-nav-link={item.label === 'Home' ? 'home' : item.href.replace('#', '')} class="rounded-sm px-1 py-1 hover:text-accent data-[active=true]:bg-accent data-[active=true]:text-white">
             {item.label}
           </a>
         ))
