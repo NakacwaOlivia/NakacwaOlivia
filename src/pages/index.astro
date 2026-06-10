@@ -66,29 +66,35 @@ const experience = [
 
 const credentials = [
   {
-    title: 'Bachelor of Science in Computer Engineering',
-    place: 'Makerere University',
-    dates: 'Aug 2020 - May 2024',
-    text: 'CGPA: 3.89/5.0. Major in Computer Science with Electrical and Telecommunications Engineering minor.',
+    title: 'Master\'s in Mechatronics Engineering',
+    place: 'Ashesi University, Accra Ghana',
+    dates: 'Sept 2026 - Present',
+    text: 'Integrates knowledge of core areas in automation and production engineering with mathematics, physics, and numerical methods to develop a better understanding of mechatronics applications in a wide range of industry sectors.',
   },
   {
-    title: 'Applied Data Science Lab',
-    place: 'WorldQuant University',
-    dates: 'Jun 2024 - Present',
-    text: 'Hands-on training in predictive modeling, big data analytics, Python, and machine learning for real-world problems.',
+    title: 'Data Science Lab',
+    place: 'WorldQuant University, Washington DC USA',
+    dates: 'Jun 2026 - Present',
+    text: 'Focuses on learning to query databases, clean data, build machine learning models, and create predictive visualizations using publicly available datasets. You also work with different technologies, including files, APIs, and SQL/NoSQL databases.',
   },
   {
     title: 'Africa Climate and Health Data Capacity Accelerator Network',
     place: 'Global Partnership for Sustainable Development Data',
     dates: 'Feb 2025 - Jun 2025',
-    text: 'Program focused on data-driven solutions for climate and health challenges in Africa.',
+    text: 'Engaged in a multi-disciplinary initiative utilizing data science pipelines to address critical climate and health variables in Africa.',
+  },
+  {
+    title: 'Bachelor of Science in Computer Engineering',
+    place: 'Makerere University, Kampala Uganda',
+    dates: 'Aug 2020 - May 2024',
+    text: 'Earned the degree with a 3.89/5.0 CGPA. Program featured a comprehensive Computer Science major paired with an Electrical and Telecommunications Engineering, focusing on the intersection of software development, network systems, and hardware design.',
   },
 ];
 
 const skillGroups = [
   {
     title: 'AI & Systems',
-    skills: ['Machine Learning', 'Computer Vision', 'NLP', 'Real-Time Systems', 'Distributed Systems', 'Model Optimization'],
+    skills: ['Machine Learning', 'Computer Vision', 'Real-Time Systems', 'Distributed Systems', 'Model Optimization'],
   },
   {
     title: 'Tools',
@@ -135,13 +141,13 @@ const featuredProjects = [
   <main class="relative min-h-screen overflow-hidden bg-paper">
     <Nav />
 
-    <section class="mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-5 pb-16 pt-32 sm:px-8 sm:pt-36 lg:grid-cols-[1.15fr_0.85fr] lg:pb-20">
+    <section class="mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-5 pb-16 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.15fr_0.85fr] lg:pb-20 lg:pt-36">
       <div class="relative z-10 max-w-2xl">
         <p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-accent">Computer Engineer</p>
-        <h1 class="text-5xl font-black leading-tight text-ink sm:text-6xl lg:text-7xl">
+        <h1 class="text-4xl font-black leading-tight text-ink sm:text-6xl lg:text-7xl">
           Olivia Nakacwa
         </h1>
-        <p class="mt-5 text-2xl font-bold leading-tight text-neutral-900 sm:text-3xl">
+        <p class="mt-5 text-xl font-bold leading-tight text-neutral-900 sm:text-3xl">
           Building Scalable AI Systems for Real-World Environments
         </p>
         <p class="mt-6 max-w-xl text-lg font-semibold leading-8 text-neutral-700">
@@ -159,10 +165,12 @@ const featuredProjects = [
           </a>
         </div>
 
-        <div class="mt-16 flex gap-5 text-sm font-bold uppercase tracking-[0.16em] text-neutral-700">
-          <a href="https://www.linkedin.com/in/nakacwa-olivia/" target="_blank" rel="noopener noreferrer" class="hover:text-accent">LinkedIn</a>
+        <div class="mt-12 flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[0.16em] text-neutral-700 sm:mt-16 sm:text-sm">
           <a href="https://github.com/NakacwaOlivia" target="_blank" rel="noopener noreferrer" class="hover:text-accent">GitHub</a>
-          <a href="mailto:k.nakacwa.olivia@gmail.com" class="hover:text-accent">Email</a>
+          <a href="https://www.linkedin.com/in/nakacwa-olivia/" target="_blank" rel="noopener noreferrer" class="hover:text-accent">LinkedIn</a>
+          <a href="https://orcid.org/0009-0009-9476-1735" target="_blank" rel="noopener noreferrer" class="hover:text-accent">ORCID</a>
+          <a href="https://www.researchgate.net/profile/Olivia-Nakacwa" target="_blank" rel="noopener noreferrer" class="hover:text-accent">ResearchGate</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=9YCHBzkAAAAJ" target="_blank" rel="noopener noreferrer" class="hover:text-accent">Google Scholar</a>
         </div>
       </div>
 
@@ -181,7 +189,7 @@ const featuredProjects = [
       <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.65fr_1.35fr]">
         <div>
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">About</p>
-          <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Intelligent systems for constrained environments</h2>
+          <h2 class="mt-3 text-3xl font-black text-ink sm:text-4xl lg:text-5xl">Intelligent systems for constrained environments</h2>
         </div>
         <div class="space-y-5 text-lg leading-8 text-neutral-700">
           <p>I am a computer engineer focused on designing intelligent systems that operate reliably in real-world environments. My work sits at the intersection of machine learning, distributed systems, and real-time computing, with interests spanning scalable AI systems, geospatial intelligence, computer vision, and on-device inference.</p>
@@ -194,10 +202,10 @@ const featuredProjects = [
 
     <section id="projects" class="bg-[#101010] px-5 py-20 text-white sm:px-8">
       <div class="mx-auto max-w-6xl">
-        <div class="flex items-center justify-between gap-4">
-          <div>
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <div class="min-w-0">
             <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Projects</p>
-            <h2 class="mt-3 text-4xl font-black sm:text-5xl">Featured AI Systems Work</h2>
+            <h2 class="mt-3 text-3xl font-black sm:text-4xl lg:text-5xl">Featured AI Systems Work</h2>
           </div>
           <div class="flex gap-3">
             <button id="projects-carousel-prev" class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-ink hover:bg-accent hover:text-white hover:border-accent">
@@ -217,11 +225,11 @@ const featuredProjects = [
           <div id="projects-carousel-container" class="flex gap-5 transition-transform duration-300">
             {
               featuredProjects.map((project) => (
-                <article class="flex-shrink-0 w-full grid gap-8 rounded-lg border border-white/10 bg-[#191919] p-6 shadow-soft sm:p-8 lg:grid-cols-[1.25fr_0.75fr]">
-                  <div>
+                <article class="grid w-full flex-shrink-0 gap-6 rounded-lg border border-white/10 bg-[#191919] p-4 shadow-soft sm:p-6 lg:grid-cols-[1.25fr_0.75fr] lg:gap-8 lg:p-8">
+                  <div class="min-w-0">
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">{project.dates}</p>
-                    <h3 class="mt-3 text-3xl font-black">{project.title}</h3>
-                    <p class="mt-3 font-bold text-white/80">{project.tech}</p>
+                    <h3 class="mt-3 break-words text-2xl font-black sm:text-3xl">{project.title}</h3>
+                    <p class="mt-3 break-words font-bold text-white/80">{project.tech}</p>
                     <p class="mt-6 text-lg leading-8 text-white/75">
                       {project.text}
                     </p>
@@ -232,11 +240,11 @@ const featuredProjects = [
                         </a>
                       )}
                       {project.submitted && (
-                        <span class="rounded-md bg-accent px-5 py-3 text-sm font-bold uppercase text-white">Submitted and Under Review</span>
+                        <span class="max-w-full rounded-md bg-accent px-5 py-3 text-sm font-bold uppercase text-white">Submitted and Under Review</span>
                       )}
                     </div>
                   </div>
-                  <div class="rounded-lg bg-white p-5 text-ink">
+                  <div class="min-w-0 rounded-lg bg-white p-5 text-ink">
                     <h4 class="text-sm font-black uppercase tracking-[0.16em] text-neutral-600">Project Highlights</h4>
                     <ul class="mt-5 space-y-4">
                       {project.highlights.map((metric) => (
@@ -258,7 +266,7 @@ const featuredProjects = [
       <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_1fr]">
         <div>
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Research</p>
-          <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Reliable AI systems for real-world environments</h2>
+          <h2 class="mt-3 text-3xl font-black text-ink sm:text-4xl lg:text-5xl">Reliable AI systems for real-world environments</h2>
           <p class="mt-6 text-lg leading-8 text-neutral-700">
             My research focuses on building reliable, scalable AI systems for real-world and resource-constrained environments, with interests spanning machine learning systems, geospatial AI, computer vision, hydrogeophysical modeling, and distributed intelligent infrastructure.
           </p>
@@ -285,10 +293,10 @@ const featuredProjects = [
 
     <section id="experience" class="bg-white px-5 py-20 sm:px-8">
       <div class="mx-auto max-w-6xl">
-        <div class="flex items-center justify-between gap-4">
-          <div>
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <div class="min-w-0">
             <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Experience</p>
-            <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Engineering delivery across AI, data, and infrastructure</h2>
+            <h2 class="mt-3 text-3xl font-black text-ink sm:text-4xl lg:text-5xl">Engineering delivery across AI, data, and infrastructure</h2>
           </div>
           <div class="flex gap-3">
             <button id="carousel-prev" class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-ink hover:bg-accent hover:text-white hover:border-accent">
@@ -309,7 +317,7 @@ const featuredProjects = [
               experience.map((item) => (
                 <article class="flex-shrink-0 w-full md:w-[calc(50%-0.625rem)] xl:w-[calc(33.333%-0.666rem)] rounded-lg border border-neutral-200 bg-paper p-6">
                   <p class="text-sm font-black uppercase tracking-[0.16em] text-accent">{item.dates}</p>
-                  <h3 class="text-2xl font-black text-ink">{item.role}</h3>
+                  <h3 class="break-words text-2xl font-black text-ink">{item.role}</h3>
                   <p class="mt-3 font-bold text-accent">{item.company}</p>
                   <p class="mt-5 leading-7 text-neutral-700">{item.text}</p>
                 </article>
@@ -322,19 +330,25 @@ const featuredProjects = [
 
     <section class="bg-paper px-5 py-20 sm:px-8">
       <div class="mx-auto max-w-6xl">
-        <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Education & Training</p>
-        <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Academic and applied data science foundation</h2>
-        <div class="mt-10 grid gap-5 lg:grid-cols-3">
-          {
-            credentials.map((item) => (
-              <article class="rounded-lg border border-neutral-200 bg-white p-6">
-                <p class="text-sm font-black uppercase tracking-[0.16em] text-accent">{item.dates}</p>
-                <h3 class="mt-3 text-2xl font-black text-ink">{item.title}</h3>
-                <p class="mt-3 font-bold text-neutral-800">{item.place}</p>
-                <p class="mt-5 leading-7 text-neutral-700">{item.text}</p>
-              </article>
-            ))
-          }
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Education & Training</p>
+            <h2 class="mt-3 text-3xl font-black text-ink sm:text-4xl lg:text-5xl">Academic and applied data science foundation</h2>
+          </div>
+        </div>
+        <div class="mt-10 overflow-hidden">
+          <div id="education-carousel-container" class="flex gap-5 transition-transform duration-500 ease-in-out">
+            {
+              credentials.map((item) => (
+                <article class="flex-shrink-0 w-full md:w-[calc(50%-0.625rem)] xl:w-[calc(33.333%-0.666rem)] rounded-lg border border-neutral-200 bg-white p-6">
+                  <p class="text-sm font-black uppercase tracking-[0.16em] text-accent">{item.dates}</p>
+                  <h3 class="mt-3 break-words text-2xl font-black text-ink">{item.title}</h3>
+                  <p class="mt-3 font-bold text-neutral-800">{item.place}</p>
+                  <p class="mt-5 leading-7 text-neutral-700">{item.text}</p>
+                </article>
+              ))
+            }
+          </div>
         </div>
       </div>
     </section>
@@ -342,7 +356,7 @@ const featuredProjects = [
     <section id="skills" class="bg-[#191919] px-5 py-20 text-white sm:px-8">
       <div class="mx-auto max-w-6xl">
         <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Skills</p>
-        <h2 class="mt-3 text-4xl font-black sm:text-5xl">AI systems toolkit</h2>
+        <h2 class="mt-3 text-3xl font-black sm:text-4xl lg:text-5xl">AI systems toolkit</h2>
         <div class="mt-10 grid gap-5 lg:grid-cols-3">
           {
             skillGroups.map((group) => (
@@ -360,10 +374,10 @@ const featuredProjects = [
 
     <section class="bg-paper px-5 py-20 sm:px-8">
       <div class="mx-auto max-w-6xl">
-        <div class="flex items-center justify-between gap-4">
-          <div>
+        <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+          <div class="min-w-0">
             <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Currently Exploring</p>
-            <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">What I am currently exploring</h2>
+            <h2 class="mt-3 text-3xl font-black text-ink sm:text-4xl lg:text-5xl">What I am currently exploring</h2>
           </div>
           <div class="flex gap-3">
             <button id="exploring-carousel-prev" class="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 bg-white text-ink hover:bg-accent hover:text-white hover:border-accent">
@@ -394,13 +408,13 @@ const featuredProjects = [
       <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_0.8fr]">
         <div>
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Contact</p>
-          <h2 class="mt-3 text-4xl font-black text-ink sm:text-5xl">Research collaborations, internships, and AI systems opportunities</h2>
+          <h2 class="mt-3 text-3xl font-black text-ink sm:text-4xl lg:text-5xl">Research collaborations, internships, and AI systems opportunities</h2>
           <p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-700">
             I am always open to research collaborations, internships, and opportunities in AI systems and intelligent infrastructure.
           </p>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <a href="mailto:k.nakacwa.olivia@gmail.com" class="rounded-md bg-ink px-5 py-4 text-center text-sm font-bold uppercase text-white hover:bg-accent">
+          <a href="mailto:k.nakacwa.olivia@gmail.com" class="break-all rounded-md bg-ink px-5 py-4 text-center text-sm font-bold uppercase text-white hover:bg-accent">
             k.nakacwa.olivia@gmail.com
           </a>
           <a href="https://www.linkedin.com/in/nakacwa-olivia/" target="_blank" rel="noopener noreferrer" class="rounded-md border border-neutral-300 px-5 py-4 text-center text-sm font-bold uppercase text-ink hover:border-accent hover:text-accent">
@@ -519,6 +533,54 @@ const featuredProjects = [
   updateProjectsCarousel();
   // Start autoplay when page loads
   startProjectsAutoplay();
+
+  // Education carousel
+  const educationCarouselContainer = document.getElementById('education-carousel-container');
+  const educationCards = Array.from(educationCarouselContainer?.children || []);
+  let educationCurrentIndex = 0;
+  let educationAutoplayInterval;
+
+  const getEducationCardsPerView = () => {
+    const width = window.innerWidth;
+    if (width >= 1280) return 3;
+    if (width >= 768) return 2;
+    return 1;
+  };
+
+  const updateEducationCarousel = () => {
+    if (!educationCarouselContainer || educationCards.length === 0) return;
+    const firstEducationCard = educationCards[0];
+    if (!firstEducationCard || !('offsetWidth' in firstEducationCard)) return;
+    const educationCardWidth = firstEducationCard.offsetWidth + 20;
+    const translateX = -educationCurrentIndex * educationCardWidth;
+    educationCarouselContainer.style.transform = `translateX(${translateX}px)`;
+  };
+
+  const nextEducationSlide = () => {
+    const educationCardsPerView = getEducationCardsPerView();
+    const educationMaxIndex = Math.max(0, educationCards.length - educationCardsPerView);
+    if (educationCurrentIndex >= educationMaxIndex) {
+      educationCurrentIndex = 0;
+    } else {
+      educationCurrentIndex = Math.min(educationMaxIndex, educationCurrentIndex + educationCardsPerView);
+    }
+    updateEducationCarousel();
+  };
+
+  const startEducationAutoplay = () => {
+    if (educationAutoplayInterval) clearInterval(educationAutoplayInterval);
+    educationAutoplayInterval = setInterval(nextEducationSlide, 5000);
+  };
+
+  window.addEventListener('resize', () => {
+    const educationCardsPerView = getEducationCardsPerView();
+    const educationMaxIndex = Math.max(0, educationCards.length - educationCardsPerView);
+    educationCurrentIndex = Math.min(educationCurrentIndex, educationMaxIndex);
+    updateEducationCarousel();
+  });
+
+  updateEducationCarousel();
+  startEducationAutoplay();
 
   // Exploring carousel
   const exploringCarouselContainer = document.getElementById('exploring-carousel-container');

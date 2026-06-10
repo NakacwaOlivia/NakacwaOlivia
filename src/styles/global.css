@@ -9,6 +9,7 @@
 
   body {
     @apply bg-paper font-sans text-ink antialiased;
+    overflow-x: hidden;
   }
 
   [id] {
@@ -17,5 +18,10 @@
 
   a {
     @apply transition-colors duration-200;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
   }
 }

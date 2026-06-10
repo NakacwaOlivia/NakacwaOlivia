@@ -12,15 +12,23 @@ const navItems = [
 ---
 
 <header class="fixed left-0 right-0 top-0 z-50 border-b border-neutral-200/80 bg-paper/95 backdrop-blur">
-  <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+  <nav class="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
     <a href={`${import.meta.env.BASE_URL}/`} class="flex shrink-0 items-center gap-3" aria-label="Olivia Nakacwa home">
-      <img src={logo.src} alt="Olivia Nakacwa logo" class="h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]" />
+      <img src={logo.src} alt="Olivia Nakacwa logo" class="h-12 w-12 object-contain sm:h-16 sm:w-16 lg:h-[4.5rem] lg:w-[4.5rem]" />
     </a>
 
-    <div class="flex min-w-0 flex-1 items-center justify-end gap-x-3 overflow-x-auto whitespace-nowrap pb-1 text-[0.68rem] font-bold uppercase text-ink sm:gap-x-5 sm:text-xs lg:gap-x-6">
+    <button id="nav-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-neutral-300 bg-white text-ink md:hidden" aria-label="Toggle navigation" aria-controls="site-nav-links" aria-expanded="false">
+      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="4" x2="20" y1="12" y2="12"></line>
+        <line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div id="site-nav-links" class="absolute left-4 right-4 top-[calc(100%+0.5rem)] hidden rounded-lg border border-neutral-200 bg-white p-3 shadow-soft md:static md:flex md:min-w-0 md:flex-1 md:items-center md:justify-end md:gap-x-5 md:border-0 md:bg-transparent md:p-0 md:shadow-none lg:gap-x-6">
       {
         navItems.map((item) => (
-          <a href={item.href} data-nav-link={item.label === 'Home' ? 'home' : item.href.replace('#', '')} class="rounded-sm px-1 py-1 hover:text-accent data-[active=true]:bg-accent data-[active=true]:text-white">
+          <a href={item.href} data-nav-link={item.label === 'Home' ? 'home' : item.href.replace('#', '')} class="block rounded-md px-3 py-2 text-sm font-bold uppercase text-ink hover:text-accent data-[active=true]:bg-accent data-[active=true]:text-white md:px-1 md:py-1 md:text-xs">
             {item.label}
           </a>
         ))
@@ -30,10 +38,31 @@ const navItems = [
 </header>
 
 <script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('site-nav-links');
   const navLinks = Array.from(document.querySelectorAll('[data-nav-link]'));
   const sectionIds = navLinks
     .map((link) => link.getAttribute('data-nav-link'))
     .filter((id): id is string => Boolean(id && id !== 'home'));
+
+  const closeMenu = () => {
+    navMenu?.classList.add('hidden');
+    navToggle?.setAttribute('aria-expanded', 'false');
+  };
+
+  navToggle?.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    navMenu?.classList.toggle('hidden', isOpen);
+    navToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeMenu();
+  });
 
   const setActiveLink = (activeId: string) => {
     navLinks.forEach((link) => {
